@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field 
+        name="id" 
+        type="number" 
+        readonly="true" 
+        class="readonly" 
+        default="0" 
+        description="JGLOBAL_FIELD_ID_DESC"
+    />
+    <field 
+        name="ordering"
+        type="text"
+        hidden="true" 
+    />
+    <field 
+        name="state" 
+        default="1" 
+        type="list" 
+        label="JSTATUS" 
+        description="JFIELD_PUBLISHED_DESC" 
+        class="inputbox" 
+      
+        size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field 
+        name="checked_out" 
+        type="hidden" 
+        filter="unset"
+    />
+    <field 
+        name="checked_out_time" 
+        default="0000-00-00 00:00:00" 
+        type="hidden" 
+        filter="unset"
+    />
+    <!-- <field 
+        name="created_by" 
+        type="user"
+        required="true" 
+        default="0" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_CREATED_BY" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_CREATED_BY" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_CREATED_BY"
+    /> -->
+    <field 
+        name="modified_by" 
+        type="user"
+        default="0" 
+        readonly="true"
+        label="COM_BUSINESS_FORM_LBL_TICKET_MODIFIED_BY" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_MODIFIED_BY"
+        hint="COM_BUSINESS_FORM_LBL_TICKET_MODIFIED_BY"
+    />
+    <field 
+        name="created_date" 
+        type="calendar"
+        default="0" 
+        readonly="true"
+        label="COM_BUSINESS_FORM_LBL_TICKET_CREATED_DATE" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_CREATED_DATE"
+        hint="COM_BUSINESS_FORM_LBL_TICKET_CREATED_DATE"
+    />
+    <field 
+        name="modified_date" 
+        type="calendar"            
+        default="0" 
+        readonly="true"
+        label="COM_BUSINESS_FORM_LBL_TICKET_MODIFIED_DATE" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_MODIFIED_DATE"
+        hint="COM_BUSINESS_FORM_LBL_TICKET_MODIFIED_DATE"
+    />
+    <!-- <field 
+        name="user_id" 
+        type="user" 
+        required="true" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_USER_ID" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_USER_ID" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_USER_ID"
+    /> -->
+    <field 
+        name="title" 
+        type="text" 
+        required="true" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_TITLE" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_TITLE" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_TITLE"
+    />
+    <field 
+        name="alias" 
+        type="text" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_ALIAS" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_ALIAS" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_ALIAS"
+    />
+    
+    <field 
+        name="short_description" 
+        maxlength="100"
+        type="textarea" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_SHORT_DESCRIPTION" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_SHORT_DESCRIPTION" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_SHORT_DESCRIPTION"/>
+    <field 
+        name="description"
+        type="editor" 
+        required="true" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_DESCRIPTION" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_DESCRIPTION" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_DESCRIPTION"
+    />
+    <field 
+        name="image"
+        type="media" 
+        required="true" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_IMAGE" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_IMAGE" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_IMAGE"
+    />
+    <field 
+        name="category"
+        type="category" 
+        required="true" 
+        extension="com_business"
+        class="inputbox"
+        default=""
+        label="COM_BUSINESS_FORM_LBL_TICKET_CATEGORY" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_CATEGORY" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_CATEGORY"
+    >
+         <option value="0">JOPTION_SELECT_CATEGORY</option>
+	</field>
+    <field 
+        name="priority" 
+        type="list" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_PRIORITY" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_PRIORITY" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_PRIORITY">
+      <option value="low">COM_BUSINESS_TICKETS_PRIORITY_OPTION_LOW</option>
+      <option value="medium">COM_BUSINESS_TICKETS_PRIORITY_OPTION_MEDIUM</option>
+      <option value="high">COM_BUSINESS_TICKETS_PRIORITY_OPTION_HIGH</option>
+    </field>
+    <field 
+        name="privacy" 
+        type="list" 
+        label="COM_BUSINESS_FORM_LBL_TICKET_PRIVACY" 
+        description="COM_BUSINESS_FORM_DESC_TICKET_PRIVACY" 
+        hint="COM_BUSINESS_FORM_LBL_TICKET_PRIVACY">
+      <option value="public">COM_BUSINESS_TICKETS_PRIVACY_OPTION_PUBLIC</option>
+      <option value="private">COM_BUSINESS_TICKETS_PRIVACY_OPTION_PRIVATE</option>
+    </field>
+    <field 
+        name="version_note" 
+        type="text" 
+        label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" 
+        description="JGLOBAL_FIELD_VERSION_NOTE_DESC" 
+        class="inputbox" 
+        size="45" 
+        labelclass="control-label"
+    />
+  </fieldset>
+</form>

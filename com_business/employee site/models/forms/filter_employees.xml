@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field 
+            name="search" 
+            type="text" 
+            hint="COM_BUSINESS_SEARCH_FILTER_SUBMIT"
+            label="COM_USERS_FILTER_SEARCH_DESC"
+            class="js-stools-search-string" 
+        />
+           <field name="state"
+               type="status"
+               label="COM_BUSINESS_FILTER_STATE"
+               description="COM_BUSINESS_FILTER_STATE_DESC"
+               onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+        <field 
+            name="priority" 
+            label="COM_BUSINESS_FORM_LBL_EMPLOYEE_PRIORITY" 
+            type="list" 
+            onchange="this.form.submit();" 
+            default="COM_BUSINESS_EMPLOYEES_PRIORITY_FILTER">
+                <option value="">COM_BUSINESS_EMPLOYEES_PRIORITY_FILTER</option>
+                 <option value="low">COM_BUSINESS_EMPLOYEES_PRIORITY_OPTION_LOW</option>
+                <option value="medium">COM_BUSINESS_EMPLOYEES_PRIORITY_OPTION_MEDIUM</option>
+                 <option value="high">COM_BUSINESS_EMPLOYEES_PRIORITY_OPTION_HIGH</option>
+        </field>
+     </fields>
+     <fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="5"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_SCHOOL_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>
